@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=<%= yield(:lang) %>>
+<html lang="<%= yield(:lang) %>">
   <head>
     <title>CoSI2020</title>
     <%= csrf_meta_tags %>
