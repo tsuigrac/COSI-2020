@@ -31,37 +31,37 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get sp-home" do
-    get home_path
+    get sp_home_path
     assert_response :success
-    assert_select "title", "sp-home | #{@base_title}"
+    assert_select "title", "sp-Home | #{@base_title}"
   end
 
   test "should get sp-resources" do
-    get resources_path
+    get sp_resources_path
     assert_response :success
     assert_select "title", "sp-Resources/Services | #{@base_title}"
   end
 
   test "should get sp-contact" do
-    get contact_path
+    get sp_contact_path
     assert_response :success
     assert_select "title", "sp-Contact | #{@base_title}"
   end
 
   test "should get fr-home" do
-    get home_path
+    get fr_home_path
     assert_response :success
     assert_select "title", "fr-Home | #{@base_title}"
   end
 
   test "should get fr-resources" do
-    get resources_path
+    get fr_resources_path
     assert_response :success
     assert_select "title", "fr-Resources/Services | #{@base_title}"
   end
 
   test "should get fr-contact" do
-    get contact_path
+    get fr_contact_path
     assert_response :success
     assert_select "title", "fr-Contact | #{@base_title}"
   end
