@@ -8,21 +8,21 @@ class StaticPagesController < ApplicationController
   def contact
   end
 
-  def sp-home
+  def sp_home
   end
 
-  def sp-resources
+  def sp_resources
   end
 
-  def sp-contact
+  def sp_contact
   end
 
-  def fr-home
+  def fr_home
   end
 
-  def fr-resources
+  def fr_resources
   end
 
-  def fr-contact
+  def fr_contact
   end
 end
