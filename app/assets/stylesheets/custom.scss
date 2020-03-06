@@ -4,7 +4,7 @@
 /* universal */
 
 body {
-  padding-top: 10px;
+  font-family: "Lato", Arial, "Sans Serif";
 }
 
 container {
@@ -63,15 +63,16 @@ body .logo {
 
 
 .nav li a {
-  font-size: 1.3em;
+  font-size: 1.1em;
   color:  black !important;
   line-height: 35px;
+  letter-spacing: 1.5px;
 }
 
 .nav li a:hover {
-  font-size: 1.3em;
-  color: rgb(179, 198, 122) !important;
+  color: rgb(0, 71, 49) !important;
   font-weight: bold;
+
 }
 
 .navbar{
@@ -81,12 +82,14 @@ body .logo {
 #navLogo{
   height: 70px;
   margin-top: 0;
-  margin-left: 3%;
+  margin-left: 2.4%;
 }
 
 #logoText{
   margin-left: 1.2%;
-  color: black;
+  color: #555555;
+  letter-spacing: 1px;
+  font-size: 10px;
 }
 
 /* footer */
