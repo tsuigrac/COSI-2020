@@ -63,9 +63,16 @@ body .logo {
 }
 
 
-.nav li a{
-  font-size: 1.2em;
+.nav li a {
+  font-size: 1.3em;
   color:  black !important;
+  line-height: 35px;
+}
+
+.nav li a:hover {
+  font-size: 1.3em;
+  color: rgb(179, 198, 122) !important;
+  font-weight: bold;
 }
 
 .navbar{
