@@ -7,7 +7,7 @@ body {
   padding-top: 10px;
 }
 
-container{
+container {
   margin-left: 0;
 }
 
@@ -56,24 +56,28 @@ p {
   line-height: 1.7em;
 }
 
-container{
-  margin-left: 0;
-}
-
-#navLogo{
-  height: 60px;
-  margin-top: 0;
-}
-
-.navbar{
-  margin-top: 80px;
-}
-
 /* header */
 
 body .logo {
-  padding-bottom: 70px;
+  padding-bottom: 10px;
 }
+
+
+.nav li a{
+  font-size: 1.2em;
+  color:  black !important;
+}
+
+.navbar{
+  background-color: #f2f2f2;
+}
+
+#navLogo{
+  height: 70px;
+  margin-top: 0;
+}
+
+
 
 /*
 #logo {
