@@ -11,7 +11,6 @@ container {
   margin-left: 0;
 }
 
-
 section {
   overflow: auto;
 }
@@ -82,31 +81,13 @@ body .logo {
 #navLogo{
   height: 70px;
   margin-top: 0;
+  margin-left: 3%;
 }
 
-
-
-/*
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  height: 10px;
+#logoText{
+  margin-left: 1.2%;
+  color: black;
 }
-
-
-#logo:hover {
-  color: #fff;
-  text-decoration: none;
-}
-
-*/
-
 
 /* footer */
 
