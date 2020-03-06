@@ -4,8 +4,13 @@
 /* universal */
 
 body {
-  padding-top: 60px;
+  padding-top: 10px;
 }
+
+container{
+  margin-left: 0;
+}
+
 
 section {
   overflow: auto;
@@ -51,9 +56,26 @@ p {
   line-height: 1.7em;
 }
 
+container{
+  margin-left: 0;
+}
+
+#navLogo{
+  height: 60px;
+  margin-top: 0;
+}
+
+.navbar{
+  margin-top: 80px;
+}
 
 /* header */
 
+body .logo {
+  padding-bottom: 70px;
+}
+
+/*
 #logo {
   float: left;
   margin-right: 10px;
@@ -63,15 +85,20 @@ p {
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
+  height: 10px;
 }
+
 
 #logo:hover {
   color: #fff;
   text-decoration: none;
 }
 
+*/
+
 
 /* footer */
+
 
 footer {
   margin-top: 45px;
