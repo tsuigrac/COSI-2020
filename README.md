@@ -1,3 +1,3 @@
 # README
 
-NavBar :)
+Website for CoSI
