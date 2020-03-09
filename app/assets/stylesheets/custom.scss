@@ -57,29 +57,28 @@ p {
 
 /* header */
 
-body .logo {
-  padding-bottom: 10px;
-}
 
-
+//Navigation bar text
 .nav li a {
   font-size: 1.1em;
-  color:  black !important;
+  color:  black;
   line-height: 35px;
   letter-spacing: 1.5px;
 }
 
 .nav li a:hover {
-  color: rgb(0, 71, 49) !important;
+  color: rgb(0, 71, 49);
   font-weight: bold;
 
 }
 
+//Navigation bar
 .navbar{
   background-color: #f2f2f2;
 }
 
 
+//CoSI logo and text underneath
 #navLogo{
   height: 70px;
   margin-top: 0;
