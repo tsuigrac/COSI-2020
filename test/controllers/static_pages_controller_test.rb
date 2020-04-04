@@ -30,6 +30,12 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "Contact | #{@base_title}"
   end
 
+  test "should get volunteer" do
+    get volunteer_path
+    assert_response :success
+    assert_select "title", "Volunteer or Donate | #{@base_title}"
+  end
+
   test "should get sp-home" do
     get sp_home_path
     assert_response :success
@@ -48,6 +54,12 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "sp-Contact | #{@base_title}"
   end
 
+  test "should get sp-volunteer" do
+    get sp_volunteer_path
+    assert_response :success
+    assert_select "title", "sp-Volunteer or Donate | #{@base_title}"
+  end
+
   test "should get fr-home" do
     get fr_home_path
     assert_response :success
@@ -64,6 +76,12 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     get fr_contact_path
     assert_response :success
     assert_select "title", "fr-Contact | #{@base_title}"
+  end
+
+  test "should get fr-volunteer" do
+    get fr_volunteer_path
+    assert_response :success
+    assert_select "title", "fr-Volunteer or Donate | #{@base_title}"
   end
 
 end

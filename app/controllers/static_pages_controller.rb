@@ -8,6 +8,9 @@ class StaticPagesController < ApplicationController
   def contact
   end
 
+  def volunteer
+  end
+
   def sp_home
   end
 
@@ -17,6 +20,9 @@ class StaticPagesController < ApplicationController
   def sp_contact
   end
 
+  def sp_volunteer
+  end
+
   def fr_home
   end
 
@@ -24,5 +30,8 @@ class StaticPagesController < ApplicationController
   end
 
   def fr_contact
+  end
+
+  def fr_volunteer 
   end
 end
