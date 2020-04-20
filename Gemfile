@@ -5,7 +5,10 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-# Declare Ruby version
+# Use sitemap generator for search engine indexing
+gem 'sitemap_generator'
+
+# Decalre Ruby version
 ##ruby '2.5.7'
 
 #gem 'rails', '5.1.6'
