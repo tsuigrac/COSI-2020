@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'community_resources/new'
+
   root 'static_pages#home'
   get '/home', to: 'static_pages#home'
   get '/resources', to: 'static_pages#resources'
