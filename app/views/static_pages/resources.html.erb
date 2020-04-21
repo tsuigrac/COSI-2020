@@ -5,20 +5,46 @@
   <div class="column categories">
     <ul class="list data">
         <li>Language Assistance</li>
+        <br>
         <li>Legal Assistance</li>
+        <br>
         <li>Community Resources</li>
+        <br>
         <li>Education about Immigration Issues</li>
      </ul>
   </div>
   <div class="column resources">
     <ul class="list data border-left">
-      <li>Resource 1 asdfasfaslfjae;kfksdalfk</li>
-      <li>Resource 2</li>
-      <li>Resource 3</li>
-      <li>Resource 4</li>
-      <li>Resource 5</li>
-      <li>Resource 6</li>
-      <li>Resource 7</li>
+      <% @resources.each do |resource| %>
+        <li style="font-weight: bold;"><%=resource.name%></li>
+
+        <% if resource.description != nil%>
+            <li><%= resource.description%></li>
+        <%end%>
+
+          <% if resource.link != nil%>
+              <li>Click <%= link_to "here", resource.link, target: :_blank %> to access this resource.</li>
+          <%end%>
+
+          <% if resource.contact != nil%>
+              <li><b>Contact Person: </b><%=resource.contact%></li>
+          <%end%>
+
+          <% if resource.email != nil%>
+                <li><b>Email: </b> <%=resource.email%></li>
+          <%end%>
+
+
+          <% if resource.phone != nil%>
+                <li><b>Phone Number: </b><%= resource.phone%></li>
+          <%end%>
+
+          <% if resource.address != nil%>
+                <li><b>Address: </b><%= resource.address%></li>
+          <%end%>
+
+          <br><br>
+      <%end %>
     </ul>
   </div>
 </div>
