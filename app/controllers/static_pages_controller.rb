@@ -4,7 +4,7 @@ class StaticPagesController < ApplicationController
   end
 
   def resources
-      @resources = CommunityResource.all
+      @resources = CommunityResource.order("category")
   end
   
 

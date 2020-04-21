@@ -15,7 +15,19 @@
   </div>
   <div class="column resources">
     <ul class="list data border-left">
-      <% @resources.each do |resource| %>
+
+
+      <% count = 0 %>
+      <% @resources.each do |resource|%>
+
+      <!-- Display category name if new category -->
+      <% if count==0 || @resources[count-1].category != @resources[count].category%>
+          <li class="underline category">
+            <%= resource.category %>
+          </li>
+      <%end%>
+
+      <!-- List variables for each resource, if not empty -->
         <li style="font-weight: bold;"><%=resource.name%></li>
 
         <% if resource.description != nil%>
@@ -42,8 +54,8 @@
           <% if resource.address != nil%>
                 <li><b>Address: </b><%= resource.address%></li>
           <%end%>
-
           <br><br>
+          <%count = count + 1%>
       <%end %>
     </ul>
   </div>
