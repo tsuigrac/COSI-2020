@@ -4,13 +4,14 @@
 <div class="row">
   <div class="column categories">
     <ul class="list data">
-        <li>Language Assistance</li>
+      <li class="underline", style="margin-bottom:4%;">Jump to...</li>
+        <li><a href="#Community">Community Resources</a></li>
         <br>
-        <li>Legal Assistance</li>
+        <li><a href="#Education">Education about Immigration Issues</a></li>
         <br>
-        <li>Community Resources</li>
+        <li><a href = "#Language">Language Assistance</a></li>
         <br>
-        <li>Education about Immigration Issues</li>
+        <li><a href = "#Legal">Legal Assistance</a></li>
      </ul>
   </div>
   <div class="column resources">
@@ -21,8 +22,10 @@
       <% @resources.each do |resource|%>
 
       <!-- Display category name if new category -->
+      <!-- id is the first word in the category name (used to jump to this point
+            when user clicks on category on left) -->
       <% if count==0 || @resources[count-1].category != @resources[count].category%>
-          <li class="underline category">
+          <li class="underline category" id="<%= resource.category.split.first%>">
             <%= resource.category %>
           </li>
       <%end%>
