@@ -33,7 +33,6 @@ textarea {
   margin-bottom: 10px;
 }
 
-
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -52,6 +51,15 @@ h2 {
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
+  font-weight: normal;
+  color: #777;
+}
+
+h3 {
+  font-size: 1.4em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: left;
   font-weight: normal;
   color: #777;
 }
