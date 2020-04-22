@@ -5,6 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# Use sitemap generator for search engine indexing
+gem 'sitemap_generator'
+
 # Decalre Ruby version
 ##ruby '2.5.7'
 
@@ -23,6 +26,7 @@ gem 'sass-rails', '5.0.6'
 gem 'uglifier', '3.2.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+gem 'acts-as-taggable-on', '~> 6.0'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '4.2.2'

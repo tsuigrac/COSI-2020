@@ -1,20 +1,65 @@
 <% provide(:title, "Resources/Services") %>
 <% provide(:lang, "en") %>
 
-<div style="display:block; width:100%;">
 <div class="row">
-  <div style="width:30%; float: left; display: inline-block;">
-  
-  <ul class="list border-right">
-      <li>Language Assistance</li>
-      <li>Legal Assistance</li>
-      <li>Community Resources</li>
-      <li>Education about Immigration Issues</li>
-   </ul>
-  
+  <div class="column categories">
+    <ul class="list data">
+      <li class="underline", style="margin-bottom:4%;">Jump to...</li>
+        <li><a href="#Community">Community Resources</a></li>
+        <br>
+        <li><a href="#Education">Education about Immigration Issues</a></li>
+        <br>
+        <li><a href = "#Language">Language Assistance</a></li>
+        <br>
+        <li><a href = "#Legal">Legal Assistance</a></li>
+     </ul>
   </div>
-  <div style="width:70%; float: left; display: inline-block;">
-  
+  <div class="column resources">
+    <ul class="list data border-left">
 
+
+      <% count = 0 %>
+      <% @resources.each do |resource|%>
+
+      <!-- Display category name if new category -->
+      <!-- id is the first word in the category name (used to jump to this point
+            when user clicks on category on left) -->
+      <% if count==0 || @resources[count-1].category != @resources[count].category%>
+          <li class="underline category" id="<%= resource.category.split.first%>">
+            <%= resource.category %>
+          </li>
+      <%end%>
+
+      <!-- List variables for each resource, if not empty -->
+        <li style="font-weight: bold;"><%=resource.name%></li>
+
+        <% if resource.description != nil%>
+            <li><%= resource.description%></li>
+        <%end%>
+
+          <% if resource.link != nil%>
+              <li>Click <%= link_to "here", resource.link, target: :_blank %> to access this resource.</li>
+          <%end%>
+
+          <% if resource.contact != nil%>
+              <li><b>Contact Person: </b><%=resource.contact%></li>
+          <%end%>
+
+          <% if resource.email != nil%>
+                <li><b>Email: </b> <%=resource.email%></li>
+          <%end%>
+
+
+          <% if resource.phone != nil%>
+                <li><b>Phone Number: </b><%= resource.phone%></li>
+          <%end%>
+
+          <% if resource.address != nil%>
+                <li><b>Address: </b><%= resource.address%></li>
+          <%end%>
+          <br><br>
+          <%count = count + 1%>
+      <%end %>
+    </ul>
   </div>
 </div>

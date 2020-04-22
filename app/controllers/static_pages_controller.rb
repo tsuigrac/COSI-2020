@@ -1,9 +1,12 @@
 class StaticPagesController < ApplicationController
+    
   def home
   end
 
   def resources
+      @resources = CommunityResource.order("category")
   end
+  
 
   def contact
   end
