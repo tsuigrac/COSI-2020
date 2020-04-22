@@ -223,7 +223,7 @@ p {
   text-align: left;
 }
 
-.column {
+.column.home {
   float: left;
   width: 50%;
 }
@@ -243,4 +243,37 @@ p {
 
 .border-right {
     border-right: 1px solid black;
+}
+
+li:not(.navlist){
+  margin-bottom: 1%;
+}
+
+/* Resources */
+.column.categories{
+  float: left;
+  width: 25%;
+  text-align: left;
+}
+
+.column.resources{
+  float: right;
+  width: 75%;
+}
+
+.border-left{
+  border-left: 1px solid black;
+}
+
+.list.data{
+  margin-left:0;
+  padding-left: 10%;
+  line-height: 1.5;
+  list-style: none;
+}
+
+.underline.category{
+  margin-bottom: 2%;
+  color: black;
+  font-size: 1.1em;
 }
