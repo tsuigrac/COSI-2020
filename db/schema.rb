@@ -10,19 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200420165148) do
+ActiveRecord::Schema.define(version: 20200417192722) do
 
   create_table "community_resources", force: :cascade do |t|
     t.string "category"
     t.string "name"
     t.string "link"
     t.string "email"
+    t.string "phone"
     t.string "address"
     t.string "contact"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "phone"
   end
 
   create_table "taggings", force: :cascade do |t|

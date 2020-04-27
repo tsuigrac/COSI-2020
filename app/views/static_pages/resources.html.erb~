@@ -1,4 +1,0 @@
-<% provide(:title, "Resources/Services") %>
-<% provide(:lang, "en") %>
-<h1>StaticPages#resources</h1>
-<p>Find me in app/views/static_pages/resources.html.erb</p>
