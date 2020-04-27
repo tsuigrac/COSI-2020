@@ -69,6 +69,16 @@ p {
   line-height: 1.7em;
 }
 
+p2 {
+  font-size: .8em;
+  line-height: 1.3em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+
+
 /* header */
 
 
@@ -76,8 +86,10 @@ p {
 .nav li a {
   font-size: 1.1em;
   color:  black;
-  line-height: 35px;
+  line-height: 20px;
   letter-spacing: 1.5px;
+  margin-bottom: 0px;
+  text-align: center;
 }
 
 .nav li a:hover {
@@ -237,10 +249,14 @@ p {
 }
 
 .list {
-  font-size: 1.5em;
-  line-height: 3;
+  font-size: 1.3em;
+  line-height: 2;
   margin-left: 15%;
   color: #777;
+  c {
+    font-style: italic;
+    font-size: 1em;
+  }
 }
 
 .underline {
