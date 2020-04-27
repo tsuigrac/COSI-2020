@@ -8,11 +8,13 @@ end
 # Use sitemap generator for search engine indexing
 gem 'sitemap_generator'
 
-# Decalre Ruby version
+# Declare Ruby version
 ##ruby '2.5.7'
 
 #gem 'rails', '5.1.6'
 gem 'bootstrap-sass', '3.3.7'
+gem 'mail_form'
+gem 'dotenv-rails', groups: [:development, :test]
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '5.1.6'
