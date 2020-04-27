@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
+  get 'contacts/new'
+
+  get 'contact/new'
+
   get 'community_resources/new'
 
   root 'static_pages#home'
   get '/home', to: 'static_pages#home'
   get '/resources', to: 'static_pages#resources'
-  get '/contact', to: 'static_pages#contact'
+  get '/contact', to: 'contacts#new'
   get '/volunteer', to: 'static_pages#volunteer'
   
   get '/fr_home', to: 'static_pages#fr_home'
@@ -18,6 +22,7 @@ Rails.application.routes.draw do
   get '/sp_volunteer', to: 'static_pages#sp_volunteer'
   
   get '/send_email', to: 'static_pages#send_email'
+  resources :contacts, only: [:new, :create]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
