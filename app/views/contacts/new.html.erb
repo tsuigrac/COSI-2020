@@ -1,25 +1,49 @@
 <% provide(:title, "Contact") %>
 <% provide(:lang, "en") %>
 
-<%= form_for @contact do |f| %>
-   <% if flash[:error].present? %>
-       <p> flash[:error]</p>
-   <% end %>
-   <%= f.label :name %> <br>
-   <%= f.text_field :name, required: true %>
 
-   <br>
-   <%= f.label :email %> <br>
-   <%= f.text_field :email, required: true %>
-
-   <br>
-   <%= f.label :message %> <br>
-   <%= f.text_area :message, as: :text %>
-
-
-   <%= f.label :nickname %> <br>
-   <%= f.text_field :nickname, hint: 'leave this field blank' %>
+<div style="display:block; width:100%;">
+<div class="row">
+  <div style="width:50%; float: left; display: inline-block;">
+<h1> Contact us to... </h1>
+<ul>
+  <li><h3>Receive humanitarian assistance and information regarding immigrant rights and legal strategy.</h3></li>
+  <li><h3>Volunteer professional services or personal skills and abilities.</h3></li>
+  <li><h3>Request workshops, seminars, or public presentations.</h3></li>
+  <li style="list-style:none;"><h3>Phone: 641-316-6868</h3></li>
+  <li style="list-style:none;"><h3>Email: <a href="mailto:cosicentraliowa@gmail.com" >
+ cosicentraliowa@gmail.com </a></h3></li>
+ <li style="list-style:none;"><h3>First Presbyterian Church <br> 1025 5th Ave <br>
+   Grinnell, IA 50112</h3></li>
+</ul>
+  </div>
 
 
-   <%= f.submit 'Send Message', class: "button" %>
- <% end %>
+
+  <div style="width:50%; float: left; display: inline-block;">
+    <h1> Reach out to us... </h1>
+    <h3 style="margin-left:10%;">
+      <%= form_for @contact do |f| %>
+         <% if flash[:error].present? %>
+             <p> flash[:error]</p>
+         <% end %>
+         <%= f.label :name %> <br>
+         <%= f.text_field :name, required: true %><br><br>
+
+         <%= f.label :email %> <br>
+         <%= f.text_field :email, required: true %><br><br>
+
+         <%= f.label :message %> <br>
+         <%= f.text_area :message, as: :text %><br>
+
+
+         <% f.label :nickname %> <br>
+         <% f.text_field :nickname, hint: 'leave this field blank' %>
+
+
+         <%= f.submit 'Send Message', class: "button" %>
+       <% end %>
+    </h3>
+
+  </div>
+</div>
