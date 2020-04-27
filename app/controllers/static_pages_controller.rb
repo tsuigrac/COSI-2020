@@ -7,8 +7,13 @@ class StaticPagesController < ApplicationController
       @resources = CommunityResource.order("category")
   end
   
-
   def contact
+  end
+  
+  def send_email
+      message = MessageMailer.new_message_email
+      message.deliver_now
+      redirect_to root_path
   end
 
   def volunteer

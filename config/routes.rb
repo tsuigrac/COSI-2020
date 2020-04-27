@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   get '/sp_resources', to: 'static_pages#sp_resources'
   get '/sp_contact', to: 'static_pages#sp_contact'
   get '/sp_volunteer', to: 'static_pages#sp_volunteer'
+  
+  get '/send_email', to: 'static_pages#send_email'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
