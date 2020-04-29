@@ -21,13 +21,12 @@
     <h1> Reach out to us... </h1>
     <h3 style="margin-left:10%;">
       <%= form_for @contact do |f| %>
-         <% if flash[:error].present? %>
-             <p> flash[:error]</p>
-         <% end %>
-         <%= f.label :name %> <br>
-         <%= f.text_field :name, required: true %><br><br>
+         <%= f.label :name, 'Name' %> <br>
+         <%= f.text_field :name, required: false %><br><br>
 
-         <%= f.label :contact_info %> <br>
+         <%= f.label :contact_info, 'Email or Phone Number' %> <br>
+         <p style="font-size: 0.8em; margin-top: 0px;">*Please make sure this field is correct! It is the only
+            place we can contact to respond to your message. </p>
          <%= f.text_field :contact_info, required: true %><br><br>
 
          <%= f.label :subject %> <br>
@@ -41,6 +40,11 @@
 
          <%= f.submit 'Send Message', class: "button" %>
        <% end %>
+
+       <% flash.each do |key, value| %>
+         <div class="alert alert-<%= key %>", style="margin-top:10px;"><%= value %></div>
+       <% end %>
+       <%= yield %>
     </h3>
   </div>
 </div>
