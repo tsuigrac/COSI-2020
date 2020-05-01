@@ -72,6 +72,19 @@ Rails.application.configure do
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
+  
+  #This is the configuration code for sending emails to gmail. It hasn't been tested in production yet. To test, enter the password (in quotes) of the new tester email we provided you with in our Documentation/Transition report, and then deploy to heroku and test to see if the email has been delivered. **Make sure to check the spam box!**
+#  config.action_mailer.delivery_method = :smtp
+#   config.action_mailer.smtp_settings = {
+#       address: 'smtp.gmail.com',
+#       port: 587,
+#       domain: 'gmail.com',
+#       user_name: 'cosicontactus@gmail.com',
+#       password: ENV["COSI_PASS"],
+#       authentication: 'plain',
+#       enable_starttis_auto: true
+#   }
+#
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify

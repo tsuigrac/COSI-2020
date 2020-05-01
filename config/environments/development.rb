@@ -34,9 +34,21 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   #config.action_mailer.delivery_method = :sendmail
  
- #Use mailcatcher gem to view emails
- config.action_mailer.delivery_method = :smtp
- config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
+#Use mailcatcher gem to view emails
+#config.action_mailer.delivery_method = :smtp
+#config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
+
+  config.action_mailer.delivery_method = :smtp
+   config.action_mailer.smtp_settings = {
+       address: 'smtp.gmail.com',
+       port: 587,
+       domain: 'gmail.com',
+       user_name: 'cosicontactus@gmail.com',
+       password: ENV['COSI_PASS'],
+       authentication: 'plain',
+       enable_starttis_auto: true
+   }
+
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
