@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200417192722) do
+ActiveRecord::Schema.define(version: 20200501124359) do
 
   create_table "community_resources", force: :cascade do |t|
     t.string "category"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20200417192722) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "splink"
   end
 
   create_table "taggings", force: :cascade do |t|
