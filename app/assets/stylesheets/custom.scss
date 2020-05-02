@@ -1,7 +1,31 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/* universal */
+/*---------------*---------------------
+ |  Site Colors  |
+ *---------------*/
+
+/* General */
+$main-text: #777; // Used for most pages
+$border: black; // Used for most borders (e.g. homepage, resources page)
+
+/* Header colours */
+$header-background: #f2f2f2; // header navbar background
+$header-text: black; // header navbar text
+$header-hover: rgb(0, 71, 49); // navbar text hover
+
+$logo-text: #555555; // title text next to CoSI logo at top
+
+/* Footer colours */
+$footer-background:  #fff;
+$footer-border-top: #e5e5e5; // the line separating footer from body
+$footer-text: #2f2f2f;
+$footer-copyright: #999;
+
+
+/*---------------*---------------------
+ |   Universal   |
+ *---------------*/
 
 body {
   font-family: "Lato", Arial, "Sans Serif";
@@ -33,7 +57,10 @@ textarea {
   margin-bottom: 10px;
 }
 
-/* typography */
+
+/*--------------*----------------------
+ |  Typography  |
+ *--------------*/
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
@@ -52,7 +79,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: #777;
+  color: $main-text;           // color
 }
 
 h3 {
@@ -61,7 +88,7 @@ h3 {
   margin-bottom: 30px;
   text-align: left;
   font-weight: normal;
-  color: #777;
+  color: $main-text;           // color
 }
 
 p {
@@ -79,13 +106,14 @@ p2 {
 }
 
 
-/* header */
+/*--------------*----------------------
+ |    Header    |
+ *--------------*/
 
-
-//Navigation bar text
+/* Navigation bar text */
 .nav li a {
   font-size: 1.1em;
-  color:  black;
+  color: $header-text;           // color
   line-height: 20px;
   letter-spacing: 1.5px;
   margin-bottom: 0px;
@@ -93,40 +121,47 @@ p2 {
 }
 
 .nav li a:hover {
-  color: rgb(0, 71, 49);
+  color: $header-hover;           // color
   font-weight: bold;
-
 }
 
-//Navigation bar
-.navbar{
-  background-color: #f2f2f2;
+.nav li a.short {   // to make link same height as those with spanish
+    padding-bottom: 35px;
+}
+
+/* Navigation bar */
+.navbar {
+  background-color: $header-background;           // color
 }
 
 
-//CoSI logo and text underneath
-#navLogo{
+/* CoSI logo and text */
+#navLogo {
   height: 80;
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 2.4%;
 }
 
-#logoText{
+#logoText {
   margin-left: 1%;
-  color: #555555;
+  color: $logo-text;           // color
   letter-spacing: 1px;
   font-size: 10px;
 }
 
-/* footer */
+
+/*--------------*----------------------
+ |    Footer    |
+ *--------------*/
+
 .footer {
   display: flex;
   flex-flow: row wrap;
   padding: 5px 5px 5px 5px;
-  color: #2f2f2f;
-  background-color: #fff;
-  border-top: 1px solid #e5e5e5;
+  color: $footer-text;           // color
+  background-color: $footer-background;           // color
+  border-top: 1px solid $footer-border-top;           // color
 }
 
 .footer > * {
@@ -156,9 +191,9 @@ p2 {
   justify-content: center;
   height: 36px;
   max-width: max-content;
-  background-color: rgb(33, 33, 33);
+  background-color: rgb(33, 33, 33);           // color
   border-radius: 100px;
-  color: #2f2f2f;
+  color: $footer-text;           // color
   line-height: 0;
   margin: 0.6em 0;
   font-size: 1rem;
@@ -180,7 +215,7 @@ p2 {
 
 .footer__nav {
   display: flex;
-	flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 
 .footer__nav > * {
@@ -189,7 +224,7 @@ p2 {
 }
 
 .nav__ul a {
-  color: #999;
+  color: $footer-copyright;           // color
 }
 
 .nav__ul--extra {
@@ -200,7 +235,7 @@ p2 {
 .legal {
   display: flex;
   flex-wrap: wrap;
-  color: #999;
+  color: $footer-copyright;           // color
 }
 
 .legal__links {
@@ -209,9 +244,10 @@ p2 {
 }
 
 .heart {
-  color: #2f2f2f;
+  color: $footer-text;           // color
 }
 
+/* Format based on device screen size */
 @media screen and (min-width: 24.375em) {
   .legal .legal__links {
     margin-left: auto;
@@ -236,7 +272,11 @@ p2 {
   }
 }
 
-/* Homepage */
+
+/*--------------*----------------------
+ |   Homepage   |
+ *--------------*/
+
 #about {
   font-size: 1.5em;
   letter-spacing: 0px;
@@ -252,7 +292,7 @@ p2 {
   font-size: 1.3em;
   line-height: 2;
   margin-left: 15%;
-  color: #777;
+  color: $main-text;           // color
   c {
     font-style: italic;
     font-size: 1em;
@@ -265,47 +305,56 @@ p2 {
   font-weight: bold;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .border-right {
-    border-right: 1px solid black;
+    border-right: 1px solid $border;           // color
 }
 
 li:not(.navlist){
   margin-bottom: 1%;
 }
 
+/* Link colors for columns */
 a.homelink {
-    color: #777;
+    color: $main-text;           // color
 }
 
 a.hometitlelink {
-    color: black;
+    color: $header-text;           // color
 }
 
-/* Resources */
-.column.categories{
+
+/*---------------*---------------------
+ |   Resources   |
+ *---------------*/
+
+.column.categories {
   float: left;
   width: 25%;
   text-align: left;
 }
 
-.column.resources{
+.column.resources {
   float: right;
   width: 75%;
 }
 
-.border-left{
-  border-left: 1px solid black;
+.border-left {
+  border-left: 1px solid $border;           // color
 }
 
-.list.data{
-  margin-left:0;
+.list.data {
+  margin-left: 0;
   padding-left: 10%;
   line-height: 1.5;
   list-style: none;
 }
 
-.underline.category{
+.underline.category {
   margin-bottom: 2%;
-  color: black;
+  color: black;           // color
   font-size: 1.1em;
 }

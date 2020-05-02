@@ -1,70 +1,117 @@
+<!-- Title (text that appears on webpage tab), language (for accessibility) -->
+<!--   provided to app/views/layouts/application.html.erb-->
 <% provide(:title, "Resources/Services") %>
 <% provide(:lang, "en") %>
 
 <div class="row">
+
+  <!-- *** Left Sidebar (Navbar) *** -->
   <div class="column categories">
     <ul class="list data">
-      <li class="underline", style="margin-bottom:4%;">Jump to...</li>
-        <li><a href="#Community">Community Resources <br> <c> Recursos en la Comunidad </c> </a></li>
-        <br>
-      <li><a href="#Education">Education about Immigration <br> <c> Educación sobre Inmigración <c> </a></li>
-       <br>
-        <li><a href = "#Language">Language Assistance <br> <c> Ayuda con la Lengua </c> </a></li>
-        <br>
-      <li><a href = "#Legal">Legal Assistance <br> <c> Ayuda legal </c> </a></li>
-     </ul>
-  </div>
+      <!-- Title of sidebar -->
+      <li class="bold", style="margin-bottom:4%;">Jump to...</li>
+
+      <!-- Sidebar links (resource categories) -->
+      <li>
+	<a href="#Community">
+	  Community Resources <br> <c> Recursos en la Comunidad </c>
+	</a>
+      </li>
+      <br>
+      
+      <li>
+	<a href="#Education">
+	  Education about Immigration <br> <c> Educación sobre Inmigración <c>
+        </a>
+      </li>
+      <br>
+      
+      <li>
+	<a href = "#Language">
+	  Language Assistance <br> <c> Ayuda con la Lengua </c>
+	</a>
+      </li>
+      <br>
+      
+      <li>
+	<a href = "#Legal">Legal Assistance <br> <c> Ayuda legal </c> </a>
+      </li>
+    </ul>
+  </div> <!-- class="column categories" -->
+
+  <!-- *** Main Text (Resources) - From Database *** -->
   <div class="column resources">
     <ul class="list data border-left">
+      <% count = 0 %> <!-- Initialize count -->
 
-
-      <% count = 0 %>
+      <!-- *** Start Loop: For each resource in database... ***-->
       <% @resources.each do |resource|%>
 
-      <!-- Display category name if new category -->
-      <!-- id is the first word in the category name (used to jump to this point
-            when user clicks on category on left) -->
-      <% if count==0 || @resources[count-1].category != @resources[count].category%>
+        <!-- Display category name if new category -->
+        <!-- id is the first word in the category name (used to jump to this
+                point when user clicks on category on left) -->
+        <% if count==0 || @resources[count-1].category != @resources[count].category%>
           <li class="underline category" id="<%= resource.category.split.first%>">
             <%= resource.category %>
           </li>
-      <%end%>
+        <%end%>
 
-      <!-- List variables for each resource, if not empty -->
-        <li style="font-weight: bold;"><%=resource.name%></li>
+        <!-- List variables for each resource, if not empty -->
+        <!--   Order: Name, Description (with link if exists), Link message,
+               Contact person, Email, Phone number, Address -->
+        <% if resource.link != nil && resource.splink != nil%>
+          <li style="font-weight: bold;"> <!-- If spanish link exists -->
+	    <%= link_to resource.name, resource.link, target: :_blank %>
+	    / <c><%= link_to "Lista de Recursos en la Comunidad",
+		     resource.splink, target: :_blank %></c>
+	    <!-- This needs to be replaced with generic code. Probably requires
+                 creating a database table with Spanish name. See
+                 https://stackoverflow.com/questions/4834809/adding-a-column-to-an-existing-table-in-a-rails-migration -->
+  	  </li>
+	<% elsif resource.link != nil %> <!-- If no Spanish, display English -->
+	  <li style="font-weight: bold;">
+	    <%= link_to resource.name, resource.link, target: :_blank %>
+  	  </li>
+        <% else %> <!-- If no link exists, just display resource name -->
+	  <li style="font-weight: bold;"><%=resource.name%></li>
+        <% end %>
 
         <% if resource.description != nil%>
             <li><%= resource.description%></li>
         <%end%>
 
-          <% if resource.link != nil%>
-              <li>Click <%= link_to "here", resource.link, target: :_blank %> to access this resource.</li>
-              <%end%>
+	<!-- If resource link in Spanish and English, display instructions -->
+        <% if resource.link != nil && resource.splink != nil %>
+           Click the resource title to access. Also available in Spanish,
+	   click título en español para acceder a este recurso.
+	<% elsif resource.link != nil %> <!-- Instructions if only English -->
+	   Click the resource title to access.
+        <%end%>
 
-	      <% if resource.splink != nil%>
-              <li><%= link_to "Apriete click", resource.splink, target: :_blank %> para acceder a este recurso en español.</li>
-              <%end%>
+        <% if resource.contact != nil%>
+          <li><b>Contact Person: </b><%=resource.contact%></li>
+        <%end%>
 
-          <% if resource.contact != nil%>
-              <li><b>Contact Person: </b><%=resource.contact%></li>
-          <%end%>
+        <% if resource.email != nil%>
+          <li><b>Email: </b>
+     	    <a href="mailto:<%=resource.email%>"> <%=resource.email%></a>
+          </li>
+        <%end%>
 
-          <% if resource.email != nil%>
-      <li><b>Email: </b> <a href="mailto:<%=resource.email%>"> <%=resource.email%></a></li>
-          <%end%>
+        <% if resource.phone != nil%>
+          <li><b>Phone Number: </b>
+	    <a href="tel:+1-<%= resource.phone%>"><%= resource.phone%></a></li>
+        <%end%>
 
-
-          <% if resource.phone != nil%>
-      <li><b>Phone Number: </b><a href="tel:+1-<%= resource.phone%>">
-	                         <%= resource.phone%></a></li>
-          <%end%>
-
-          <% if resource.address != nil%>
-                <li><b>Address: </b><%= resource.address%></li>
-          <%end%>
-          <br><br>
-          <%count = count + 1%>
-      <%end %>
+        <% if resource.address != nil%>
+          <li><b>Address: </b><%= resource.address%></li>
+        <%end%>
+	
+        <br><br>
+      
+        <%count = count + 1%> <!-- increment count -->
+      <%end %> <!-- *** End Loop *** -->
     </ul>
-  </div>
-</div>
+  </div> <!-- class="column resources" -->
+  
+</div> <!-- class="row" -->

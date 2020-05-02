@@ -1,21 +1,27 @@
 <!DOCTYPE html>
-<html lang="<%= yield(:lang) %>">
+<html lang="<%= yield(:lang) %>"> <!-- Language, for accessibility purposes -->
   <head>
-    <title><%= yield(:title) %> | CoSI</title>
+    <title><%= yield(:title) %> | CoSI</title> <!-- provided by each page -->
     <%= csrf_meta_tags %>
-<meta name="google-site-verification" content="XtY9hV8WgWGfVFx6U8clKQkzht17KJtIs44BGubkYVA" />
-<meta name=”description” content=”CoSI (Community Support for Immigrants) promotes a welcoming, respectful, and safe environment for international persons living or working in central Iowa. ”>
+    <meta name="google-site-verification"
+	  content="XtY9hV8WgWGfVFx6U8clKQkzht17KJtIs44BGubkYVA" />
+    <meta name=”description”
+	  content=”CoSI (Community Support for Immigrants) promotes a welcoming,
+	  respectful, and safe environment for international persons living or
+	  working in central Iowa. ”>
 
-    <%= stylesheet_link_tag    'application', media: 'all',
-                                              'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all',
+                                           'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application',
+	                       'data-turbolinks-track': 'reload' %>
     <%= render 'layouts/shim' %>
   </head>
 
   <body>
     <%= render 'layouts/header' %>
+    
     <div class="container">
-      <%= yield %>
+      <%= yield %> <!-- page content -->
       <%= render 'layouts/footer' %>
     </div>
   </body>

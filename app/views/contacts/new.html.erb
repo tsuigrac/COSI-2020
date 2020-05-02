@@ -1,50 +1,81 @@
+<!-- Title (text that appears on webpage tab), language (for accessibility) -->
+<!--   provided to app/views/layouts/application.html.erb-->
 <% provide(:title, "Contact") %>
 <% provide(:lang, "en") %>
 
 <div style="display:block; width:100%;">
-<div class="row">
-  <div style="width:50%; float: left; display: inline-block;">
-<h1> Contact us to... </h1>
-<ul>
-  <li><h3>Receive humanitarian assistance and information regarding immigrant rights and legal strategy.</h3></li>
-  <li><h3>Volunteer professional services or personal skills and abilities.</h3></li>
-  <li><h3>Request workshops, seminars, or public presentations.</h3></li>
-  <li style="list-style:none;"><h3>Phone: <a href="tel:+1-641-316-6868">641-316-6868</a></h3></li>
-  <li style="list-style:none;"><h3>Email: <a href="mailto:cosicentraliowa@gmail.com" >
- cosicentraliowa@gmail.com </a></h3></li>
- <li style="list-style:none;"><h3>First Presbyterian Church <br> 1025 5th Ave <br>
-   Grinnell, IA 50112</h3></li>
-</ul>
-  </div>
+  <div class="row">
+    
+    <div style="width:50%; float: left; display: inline-block;">
+      <h1> Contact us to... </h1>
+      <ul>
+        <li>
+	  <h3>
+	    Receive humanitarian assistance and information regarding
+	    immigrant rights and legal strategy.
+	  </h3>
+	</li>
+	<li>
+	  <h3>
+	    Volunteer professional services or personal skills and abilities.
+	  </h3>
+	</li>
+	<li>
+	  <h3>Request workshops, seminars, or public presentations.</h3>
+	</li>
+	
+	<li style="list-style:none;">
+	  <h3>Phone: <a href="tel:+1-641-316-6868">641-316-6868</a></h3>
+	</li>
+	<li style="list-style:none;">
+	  <h3>
+	    Email: <a href="mailto:cosicentraliowa@gmail.com">
+	            cosicentraliowa@gmail.com </a>
+	  </h3>
+	</li>
+	<li style="list-style:none;">
+	  <h3>
+	    First Presbyterian Church <br>
+	    1025 5th Ave <br>
+	    Grinnell, IA 50112
+	  </h3>
+	</li>
+      </ul>
+   </div> <!-- style="width:50%; ... -->
 
-  <div style="width:50%; float: left; display: inline-block;">
-    <h1> Reach out to us... </h1>
-    <h3 style="margin-left:10%;">
-      <%= form_for @contact do |f| %>
-         <%= f.label :name, 'Name' %> <br>
-         <%= f.text_field :name, required: false %><br><br>
+   <div style="width:50%; float: left; display: inline-block;">
+     <h1> Reach out to us... </h1>
+     <h3 style="margin-left:10%;">
+         <%= form_for @contact do |f| %>
+           <%= f.label :name, 'Name' %> <br>
+           <%= f.text_field :name, required: false %><br><br>
 
-         <%= f.label :contact_info, 'Email or Phone Number' %> <br>
-         <p style="font-size: 0.8em; margin-top: 0px;">*Please make sure this field is correct! It is the only
-            place we can contact to respond to your message. </p>
-         <%= f.text_field :contact_info, required: true %><br><br>
+           <%= f.label :contact_info, 'Email or Phone Number' %> <br>
+           <p style="font-size: 0.8em; margin-top: 0px;">
+	     *Please make sure this field is correct! It is the only
+             place we can contact to respond to your message.
+	   </p>
+           <%= f.text_field :contact_info, required: true %><br><br>
 
-         <%= f.label :subject %> <br>
-         <%= f.select :subject, @subjects, :prompt => "Select one" %><br><br>
+           <%= f.label :subject %> <br>
+           <%= f.select :subject, @subjects, :prompt => "Select one" %><br><br>
 
-         <%= f.label :message %> <br>
-         <%= f.text_area :message, as: :text %><br>
+           <%= f.label :message %> <br>
+           <%= f.text_area :message, as: :text %><br>
 
-         <% f.label :nickname %> <br>
-         <% f.text_field :nickname, hint: 'leave this field blank' %>
+           <% f.label :nickname %> <br>
+           <% f.text_field :nickname, hint: 'leave this field blank' %>
 
-         <%= f.submit 'Send Message', class: "button" %>
-       <% end %>
+           <%= f.submit 'Send Message', class: "button" %>
+         <% end %>
 
-       <% flash.each do |key, value| %>
-         <div class="alert alert-<%= key %>", style="margin-top:10px;"><%= value %></div>
+         <% flash.each do |key, value| %>
+         <div class="alert alert-<%= key %>", style="margin-top:10px;">
+	   <%= value %>
+	 </div>
        <% end %>
        <%= yield %>
     </h3>
-  </div>
-</div>
+  </div> <!-- style="width:50%; ... -->
+</div> <!-- class="row" -->
+<!-- ???    style="display:block; width:100%;" -->

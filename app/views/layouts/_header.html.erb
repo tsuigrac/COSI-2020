@@ -1,32 +1,52 @@
 <!DOCTYPE html>
 <header role="banner">
  <a style="text-decoration:none;" href= "/home">
-  <img src="assets/logo.png" width="240" alt="CoSI Logo", id="navLogo">
-</a> <img src="assets/logoText"  width="400" alt"COMMUNITY SUPPORT FOR IMMIGRANTS; COMUNIDAD DE APOYO PARA IMMIGRANTES", id="Logotext">
-</header><!-- header role="banner" -->
+   <img src="assets/logo.png" width="240" alt="CoSI Logo", id="navLogo">
+   <img src="assets/logoText"  width="400"
+	alt"COMMUNITY SUPPORT FOR IMMIGRANTS; COMUNIDAD DE APOYO PARA IMMIGRANTES",
+	id="Logotext">
+ </a>
+</header><!-- role="banner" -->
 
 <header class="navbar">
   <div class="container">
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li class="navlist"><%= link_to "HOME", root_path %></li>
-        <li class="navlist"><%= link_to(resources_path) do %>
-          RESOURCES/SERVICES
-          <br /> 
-          <p2> RECURSOS/SERVICIOS </p2> 
+        <li class="navlist">
+	  <%= link_to "HOME", root_path, class: "short" %>
+	  <!-- "short" class makes links same height as those with
+               Spanish. Delete this class if you remove the Spanish. -->
+	</li>
+	
+        <li class="navlist">
+	  <%= link_to(resources_path) do %>
+            RESOURCES/SERVICES
+            <br /> 
+            <p2> RECURSOS/SERVICIOS </p2> 
           <% end %> 
-          </li>
-        <li class="navlist"><%= link_to(contact_path) do %>
-          CONTACT
-          <br />
-          <p2> CONTACTAR </p2> 
+        </li>
+	
+        <li class="navlist">
+	  <%= link_to(contact_path) do %>
+            CONTACT
+            <br />
+            <p2> CONTACTAR </p2> 
           <% end %> 
-          </li>
-        <li class="navlist"><%= link_to "VOLUNTEER/DONATE", volunteer_path %></li>
+        </li>
+	
+        <li class="navlist">
+	  <%= link_to "VOLUNTEER/DONATE", volunteer_path, class: "short" %>
+	</li>
       </ul>
     </nav>
-  </div>
-</header>
+  </div> <!-- class="container" -->
+</header><!-- class="navbar" -->
+
+
+
+<!-- *** OLD, IGNORE *** -->
+
+
   <!--
 <nav>
       <ul class="navbar-nav nav navbar-inverse">
