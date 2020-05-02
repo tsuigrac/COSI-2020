@@ -7,11 +7,11 @@
       <li class="underline", style="margin-bottom:4%;">Jump to...</li>
         <li><a href="#Community">Community Resources <br> <c> Recursos en la Comunidad </c> </a></li>
         <br>
-        <li><a href="#Education">Education about Immigration <br> <c> Educación sobre Inmigración <c> </a></li>
-        <br>
+      <li><a href="#Education">Education about Immigration <br> <c> Educación sobre Inmigración <c> </a></li>
+       <br>
         <li><a href = "#Language">Language Assistance <br> <c> Ayuda con la Lengua </c> </a></li>
         <br>
-        <li><a href = "#Legal">Legal Assistance <br> <c> Ayuda legal </c> </a></li>
+      <li><a href = "#Legal">Legal Assistance <br> <c> Ayuda legal </c> </a></li>
      </ul>
   </div>
   <div class="column resources">
@@ -39,19 +39,24 @@
 
           <% if resource.link != nil%>
               <li>Click <%= link_to "here", resource.link, target: :_blank %> to access this resource.</li>
-          <%end%>
+              <%end%>
+
+	      <% if resource.splink != nil%>
+              <li><%= link_to "Apriete click", resource.splink, target: :_blank %> para acceder a este recurso en español.</li>
+              <%end%>
 
           <% if resource.contact != nil%>
               <li><b>Contact Person: </b><%=resource.contact%></li>
           <%end%>
 
           <% if resource.email != nil%>
-                <li><b>Email: </b> <%=resource.email%></li>
+      <li><b>Email: </b> <a href="mailto:<%=resource.email%>"> <%=resource.email%></a></li>
           <%end%>
 
 
           <% if resource.phone != nil%>
-                <li><b>Phone Number: </b><%= resource.phone%></li>
+      <li><b>Phone Number: </b><a href="tel:+1-<%= resource.phone%>">
+	                         <%= resource.phone%></a></li>
           <%end%>
 
           <% if resource.address != nil%>
