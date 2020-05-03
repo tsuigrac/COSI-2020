@@ -51,7 +51,7 @@
         <!-- id is the first word in the category name (used to jump to this
                 point when user clicks on category on left) -->
         <% if count==0 || @resources[count-1].category != @resources[count].category%>
-          <li class="underline category" id="<%= resource.category.split.first%>">
+          <li class="bold category" id="<%= resource.category.split.first%>">
             <%= resource.category %>
           </li>
         <%end%>
@@ -82,10 +82,10 @@
 
 	<!-- If resource link in Spanish and English, display instructions -->
         <% if resource.link != nil && resource.splink != nil %>
-           Click the resource title to access. Also available in Spanish,
-	   click título en español para acceder a este recurso.
+           <li>Click the resource title to access. Also available in Spanish,
+	   click título en español para acceder a este recurso.</li>
 	<% elsif resource.link != nil %> <!-- Instructions if only English -->
-	   Click the resource title to access.
+	   <li>Click the resource title to access.</li>
         <%end%>
 
         <% if resource.contact != nil%>
@@ -107,7 +107,7 @@
           <li><b>Address: </b><%= resource.address%></li>
         <%end%>
 	
-        <br><br>
+        <br>
       
         <%count = count + 1%> <!-- increment count -->
       <%end %> <!-- *** End Loop *** -->
