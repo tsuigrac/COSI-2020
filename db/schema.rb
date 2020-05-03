@@ -10,6 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
+###############################
+######    DO NOT EDIT    ###### => Use migrations instead
+###############################
+
 ActiveRecord::Schema.define(version: 20200501124359) do
 
   create_table "community_resources", force: :cascade do |t|

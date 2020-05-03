@@ -57,8 +57,8 @@
         <%end%>
 
         <!-- List variables for each resource, if not empty -->
-        <!--   Order: Name, Description (with link if exists), Link message,
-               Contact person, Email, Phone number, Address -->
+        <!--   Order of display: Name, Description (with link if exists),
+               Link message, Contact person, Email, Phone number, Address -->
         <% if resource.link != nil && resource.splink != nil%>
           <li style="font-weight: bold;"> <!-- If spanish link exists -->
 	    <%= link_to resource.name, resource.link, target: :_blank %>
@@ -86,7 +86,7 @@
 	   click título en español para acceder a este recurso.</li>
 	<% elsif resource.link != nil %> <!-- Instructions if only English -->
 	   <li>Click the resource title to access.</li>
-        <%end%>
+        <%end%> <!-- else no link, don't display message. -->
 
         <% if resource.contact != nil%>
           <li><b>Contact Person: </b><%=resource.contact%></li>
@@ -95,13 +95,14 @@
         <% if resource.email != nil%>
           <li><b>Email: </b>
      	    <a href="mailto:<%=resource.email%>"> <%=resource.email%></a>
-          </li>
+          </li> <!-- email is clickable -->
         <%end%>
 
         <% if resource.phone != nil%>
           <li><b>Phone Number: </b>
 	    <a href="tel:+1-<%= resource.phone%>"><%= resource.phone%></a></li>
-        <%end%>
+        <%end%> <!-- phone is clickable, appends +1 to support calls from
+                     phones originating outside the U.S., a likely scenario -->
 
         <% if resource.address != nil%>
           <li><b>Address: </b><%= resource.address%></li>

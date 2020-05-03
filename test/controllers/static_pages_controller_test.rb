@@ -48,11 +48,12 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "sp-Resources/Services | #{@base_title}"
   end
 
-  test "should get sp-contact" do
-    get sp_contact_path
-    assert_response :success
-    assert_select "title", "sp-Contact | #{@base_title}"
-  end
+  #test "should get sp-contact" do
+  #  get sp_contact_path
+  #  assert_response :success
+  #  assert_select "title", "sp-Contact | #{@base_title}"
+  #end
+  # Page currently doesn't exist
 
   test "should get sp-volunteer" do
     get sp_volunteer_path
@@ -72,11 +73,12 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "fr-Resources/Services | #{@base_title}"
   end
 
-  test "should get fr-contact" do
-    get fr_contact_path
-    assert_response :success
-    assert_select "title", "fr-Contact | #{@base_title}"
-  end
+  #test "should get fr-contact" do
+  #  get fr_contact_path
+  #  assert_response :success
+  #  assert_select "title", "fr-Contact | #{@base_title}"
+  #end
+  # Page currently doesn't exist
 
   test "should get fr-volunteer" do
     get fr_volunteer_path
