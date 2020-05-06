@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   get '/home', to: 'static_pages#home'
   get '/resources', to: 'resources#resources'
   get '/contact', to: 'contacts#new'
-  get '/sent', to: 'contacts#create'
   get '/volunteer', to: 'static_pages#volunteer'
   
   get '/fr_home', to: 'static_pages#fr_home'

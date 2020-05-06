@@ -1,9 +1,14 @@
+<!-- This file sets up the layout for each of the pages in the website.
+      Right now the main purpose of it is to make the site more searchable
+      in Google - this needs to be improved.  -->
+
+
 <!DOCTYPE html>
 <html lang="<%= yield(:lang) %>"> <!-- Language, for accessibility purposes -->
   <head>
     <title><%= yield(:title) %> | CoSI</title> <!-- provided by each page -->
     <%= csrf_meta_tags %>
-	
+
 	<!-- meta tags for google site verification DO NOT REMOVE: for future SEO feel free to add on tags and modify the description to improve page ranking in google search  -->
     <meta name="google-site-verification"
 	  content="XtY9hV8WgWGfVFx6U8clKQkzht17KJtIs44BGubkYVA" />
@@ -21,7 +26,7 @@
 
   <body>
     <%= render 'layouts/header' %>
-    
+
     <div class="container">
       <%= yield %> <!-- page content -->
       <%= render 'layouts/footer' %>
