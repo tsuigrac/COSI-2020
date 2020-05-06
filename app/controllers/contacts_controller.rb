@@ -1,3 +1,16 @@
+=begin
+
+#############################
+##   ABOUT THIS DOCUMENT   ##
+##   Updated May 6, 2020   ##
+#############################
+
+This file actually sends the email when the button is pressed. It also
+keeps track of the possible subjects in the dropwon of the form.
+
+=end
+
+
 class ContactsController < ApplicationController
     
     def new

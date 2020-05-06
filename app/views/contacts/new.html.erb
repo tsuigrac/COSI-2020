@@ -5,7 +5,7 @@
 
 <div style="display:block; width:100%;">
   <div class="row">
-    
+
     <div style="width:50%; float: left; display: inline-block;">
       <h1> Contact us to... </h1>
       <ul>
@@ -23,7 +23,7 @@
 	<li>
 	  <h3>Request workshops, seminars, or public presentations.</h3>
 	</li>
-	
+
 	<li style="list-style:none;">
 	  <h3>Phone: <a href="tel:+1-641-316-6868">641-316-6868</a></h3>
 	</li>
@@ -43,10 +43,12 @@
       </ul>
    </div> <!-- style="width:50%; ... -->
 
+<!--   Start of form -->
    <div style="width:50%; float: left; display: inline-block;">
      <h1> Reach out to us... </h1>
      <h3 style="margin-left:10%;">
          <%= form_for @contact do |f| %>
+         <!--   Name is not required -->
            <%= f.label :name, 'Name' %> <br>
            <%= f.text_field :name, required: false %><br><br>
 
