@@ -5,5 +5,4 @@ class ContactsControllerTest < ActionDispatch::IntegrationTest
     get contact_url
     assert_response :success
   end
-  ## CURRENTLY FAILS
 end

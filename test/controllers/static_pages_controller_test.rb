@@ -53,7 +53,7 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   #  assert_response :success
   #  assert_select "title", "sp-Contact | #{@base_title}"
   #end
-  # Page currently doesn't exist
+  # Page currently doesn't exist (we only have one contact form)
 
   test "should get sp-volunteer" do
     get sp_volunteer_path
