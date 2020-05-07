@@ -1,4 +1,13 @@
 
+###########################
+#   ABOUT THIS DOCUMENT   #
+#   Updated May 6, 2020   #
+###########################
+#
+# This file sets everything up for the development environment (probably localhost).
+# Most of the comments here were boilerplate comments made by
+# Rails. The only comments we made were for the configuration of the emails (the
+# google smtp server and the mailcatcher server)
 
 Rails.application.configure do
     # Settings specified here will take precedence over those in config/application.rb.
@@ -33,36 +42,38 @@ Rails.application.configure do
     config.action_mailer.perform_deliveries = true
     #config.action_mailer.delivery_method = :sendmail
     
-
-   # *** CONTACT FORM TESTING ***
-   # Uncomment the following code if you want to use mailcatcher to test emails.
-   # Check the README file to see how to do this.
-
+    
+    # *** CONTACT FORM TESTING ***
+    # Uncomment the following code if you want to use mailcatcher to test emails.
+    # Check the README file to see how to do this.
+    
     #config.action_mailer.delivery_method = :smtp
     #config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
     
     
-
- #   *** CONTACT FORM GMAIL ***
- #   This section sets up the gmail smtp server to send emails: note that it
- #   actually sends emails to the gmail account if it is uncommented (like right now)!
- #   The password used is the APP PASSWORD created on the gmail account, NOT the gmail
- #   account password. Check the README file for how to
- #   update this password. The password is protected: we created a config var on
- #   Heroku to store it, and you need to create a local ENV variable on your machine.
- #   Do NOT directly input the password here - it's easy
- #   to accidentally push it onto Github where everyone can see it!
     
- #   NOTE: You'll have to create a new password every time you reset the email password.
-#    This is easy to do - but you'll have to also update your local ENV variable and
-#    Heroku config variable for the contact form to work.
-#    
-#    NOTE 2: If you want to use mailcatcher to test emails in development, comment out
-#    the following config code and uncomment the mailcatcher above. We've found that we
-#    had to uninstall mailcatcher in order to switch to sending emails to the gmail
-#    account again, which was a little tedious. You may want to find a better way
-#    to switch between the two.
-#    =end
+    #   *** CONTACT FORM GMAIL ***
+    #   This section sets up the gmail smtp server to send emails: note that it
+    #   actually sends emails to the gmail account if it is uncommented (like right now)!
+    #   The password used is the APP PASSWORD created on the gmail account, NOT the gmail
+    #   account password. Check the README file for how to
+    #   update this password. The password is protected: we created a config var on
+    #   Heroku to store it, and you need to create a local ENV variable on your machine.
+    #   Do NOT directly input the password here - it's easy
+    #   to accidentally push it onto Github where everyone can see it!
+    
+    #   NOTE: You'll have to create a new password every time you reset the email password.
+    #    This is easy to do - but you'll have to also update your local ENV variable and
+    #    Heroku config variable for the contact form to work.
+    #
+    #    NOTE 2: If you want to use mailcatcher to test emails in development,
+    #comment out
+    #    the following config code and uncomment the mailcatcher above.
+    #We've found that we
+    #    had to uninstall mailcatcher in order to switch to sending emails to the gmail
+    #    account again, which was a little tedious. You may want to find a better way
+    #    to switch between the two.
+    #    =end
     
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {

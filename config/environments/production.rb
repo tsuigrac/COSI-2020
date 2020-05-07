@@ -1,17 +1,13 @@
 
-#
 ###########################
 #   ABOUT THIS DOCUMENT   #
 #   Updated May 6, 2020   #
 ###########################
 #
-#This file sets everything up for the production environment - we are using Heroku
-#for this class. Most of the comments here were boilerplate comments made by
-#Rails. The comments that we put in all are between the begin and end tags. These
-#are probably the comments you want to read to understand what we did!
-
-
-
+# This file sets everything up for the production environment - we are using Heroku
+# for this class. Most of the comments here were boilerplate comments made by
+# Rails. The only comments we made were for the configuration of the emails (the
+# google smtp server)
 
 Rails.application.configure do
     # Settings specified here will take precedence over those in config/application.rb.
@@ -98,7 +94,6 @@ Rails.application.configure do
 #    variable name (COSI_PASS) and run heroku config in your terminal to check that it
 #    updated.
 
-    
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
         address: 'smtp.gmail.com',
@@ -109,7 +104,6 @@ Rails.application.configure do
         authentication: 'plain',
         enable_starttis_auto: true
     }
-    
     
     # Send deprecation notices to registered listeners.
     config.active_support.deprecation = :notify
