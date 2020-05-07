@@ -1,16 +1,16 @@
-=begin
 
-#############################
-##   ABOUT THIS DOCUMENT   ##
-##   Updated May 6, 2020   ##
-#############################
+#
+###########################
+#   ABOUT THIS DOCUMENT   #
+#   Updated May 6, 2020   #
+###########################
+#
+#This file sets everything up for the production environment - we are using Heroku
+#for this class. Most of the comments here were boilerplate comments made by
+#Rails. The comments that we put in all are between the begin and end tags. These
+#are probably the comments you want to read to understand what we did!
 
-This file sets everything up for the production environment - we are using Heroku
-for this class. Most of the comments here were boilerplate comments made by
-Rails. The comments that we put in all are between the begin and end tags. These
-are probably the comments you want to read to understand what we did!
 
-=end
 
 
 Rails.application.configure do
@@ -88,16 +88,16 @@ Rails.application.configure do
     # the I18n.default_locale when a translation cannot be found).
     config.i18n.fallbacks = true
     
-    =begin
-    *** CONTACT FORM ***
-    This section uses the gmail smtp to send emails on Heroku.
-    Check the development.rb file for explanation - it does the same thing,
-    except in the production environment.
-    
-    If you want to update the password: do it on the Heroku website using the correct
-    variable name (COSI_PASS) and run heroku config in your terminal to check that it
-    updated.
-    =end
+
+#    *** CONTACT FORM ***
+#    This section uses the gmail smtp to send emails on Heroku.
+#    Check the development.rb file for explanation - it does the same thing,
+#    except in the production environment.
+#
+#    If you want to update the password: do it on the Heroku website using the correct
+#    variable name (COSI_PASS) and run heroku config in your terminal to check that it
+#    updated.
+
     
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
