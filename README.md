@@ -17,7 +17,7 @@ Notes taken by our community partners:
 
 Google Webmaster Account (for search engine optimization + ask Barbara for access): https://search.google.com/search-console?resource_id=https%3A%2F%2Fcosicentraliowa.herokuapp.com%2F&hl=en
 
-### How to access and install the code:
+#### How to access and install the code:
 * Make sure you have:
   + Rails version 5.1.6
   + Ruby version 2.5.7
