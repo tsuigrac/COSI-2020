@@ -17,7 +17,7 @@ Notes taken by our community partners:
 
 Google Webmaster Account (for search engine optimization + ask Barbara for access): https://search.google.com/search-console?resource_id=https%3A%2F%2Fcosicentraliowa.herokuapp.com%2F&hl=en
 
-__How to access and install the code:__
+### How to access and install the code:
 1. Make sure you have:
   + Rails version 5.1.6
   + Ruby version 2.5.7
@@ -152,3 +152,4 @@ The contents of this site itself are property of Community Support for Immigrant
 
 ### Sources
 * Ruby on Rails Tutorial: Learn Web Development with Rails. Copyright © 2016 by Michael Hartl. Last updated 2020/04/08 16:22:49 PT.
+* Materials from Grinnell College CSC 324-01, Spring 2020
