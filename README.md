@@ -1,5 +1,5 @@
 # README
-#### Contributors: Grace, Jamie, Ally, Vidush, Henry
+__Contributors: Grace, Jamie, Ally, Vidush, Henry__
 
 ----------
 
@@ -53,7 +53,7 @@ __Sitemap:__ `config/sitemap.rb`
 
 ## Contact Page Additional Info
 
-#### Configuration
+### Configuration
 Development environment: `config/environments/development.rb`
 * For the local environment (localhost:3000)
 * To test without sending actual emails: use the mailcatcher gem
@@ -70,7 +70,7 @@ Production: `config/environments/production.rb`
 * For the Heroku environment
 * Configures the website to send emails to the CoSI Gmail using the Gmail SMTP server
 
-#### Passwords/Accounts
+### Passwords/Accounts
 We are directly using the Gmail SMTP server for our website. This prevents our mail from being marked as spam or failing to send because it comes from an outside source/location. To do this, we created a special App Password for the CoSI website.
 
 __App Password:__ This is used in both the development.rb and production.rb files to send emails to gmail. It’s currently hidden away as an environmental variable `ENV[‘COSI_PASS’]` so it doesn’t display to everyone on Github. Please make sure to always use an environment password and never directly input the App Password in this file! Note that we use the App Password instead of the Gmail account password like some tutorials may tell you to do - this is to prevent our emails from being marked as spam or from not being sent because it’s from an unidentified source. 
