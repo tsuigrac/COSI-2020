@@ -9,6 +9,8 @@ CoSI original website URL (still in use): https://cosicentraliowa.org/
 
 Our website URL: https://cosicentraliowa.herokuapp.com/
 
+__All CoSI Prototypes and Community Partner Notes:__ https://docs.google.com/document/d/1yUEkut__8ZKVZPuTgrXMM4tWBSXsMRKUVcHI-bDgFfQ/edit?usp=sharing
+
 ----------
 
 ## File locations
@@ -122,8 +124,6 @@ Gems we used:
   + FAQ?
   + Board member selection? (Password protected)
 
-All CoSI Prototypes and Community Partner Notes: 
-https://docs.google.com/document/d/1yUEkut__8ZKVZPuTgrXMM4tWBSXsMRKUVcHI-bDgFfQ/edit?usp=sharing
 ---------
 
 ## License
