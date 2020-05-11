@@ -100,7 +100,7 @@ Gems we used:
 
 ---------
 
-Tasks for next group
+## Tasks for next group
 * Check formatting on other devices and platforms (e.g. phone, tablet; firefox, etc.)
 * Improve search engine optimization
 * French and Spanish languages (and the language toggle on each page)
