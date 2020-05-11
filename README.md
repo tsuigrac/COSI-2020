@@ -91,7 +91,7 @@ Gmail Account:
 
 ---------
 
-## About files
+## About the files
 
 Gems we used:
 * Acts as Taggable: https://medium.com/le-wagon/acts-as-taggable-on-tutorial-with-rails-5-417a862804b6
