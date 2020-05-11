@@ -5,23 +5,24 @@ __Contributors: Grace, Jamie, Ally, Vidush, Henry__
 
 ## Overview
 
-CoSI original website URL (still in use): https://cosicentraliowa.org/
+This document contains all of the information needed to continue working on the CoSI website project. Information about the current website setup is under __File Locations and Info__ and __Contact Page Additional Info__, as well as in comments mentioned in those sections. The gems we used are listed in the __Gems__ section. The remaining work for the next group to do is listed in the __Tasks for Next Group__ section, and some of our advice is listed in the __General Advice__ section. Lastly, there is a __License__ section which details the copyrights and our main sources. Below are links to all the main resources needed for this project, and how to get set up.
 
-Our website URL: https://cosicentraliowa.herokuapp.com/
+#### Important links
 
-All website prototypes and our community partner meeting notes: https://docs.google.com/document/d/1yUEkut__8ZKVZPuTgrXMM4tWBSXsMRKUVcHI-bDgFfQ/edit?usp=sharing
+* CoSI original website URL (still in use): https://cosicentraliowa.org/
+* Our website URL: https://cosicentraliowa.herokuapp.com/
+* All website prototypes and our community partner meeting notes: https://docs.google.com/document/d/1yUEkut__8ZKVZPuTgrXMM4tWBSXsMRKUVcHI-bDgFfQ/edit?usp=sharing
+* Notes taken by our community partners:
+  + Notes compilation/ main document: https://docs.google.com/document/d/1ICd7H8eKtrFsNsjVs4k6QpY2b94w8Ds94B3XNN3tp0o/edit#heading=h.2a9kx7jt3e1t
+  + Vanessa's notes: https://docs.google.com/document/d/1fYByjs-tpbJJAIhlLupxTkdEbUEGsPcd7c-7NCWnMMo/edit
+* Google Webmaster Account (for search engine optimization + ask Barbara (prof) for access): https://search.google.com/search-console?resource_id=https%3A%2F%2Fcosicentraliowa.herokuapp.com%2F&hl=en
+* Our Final Presentation and Final Team Report (ask Barbara (prof) for access; we don't want our full names on this repository, since it is open-source)
 
-Notes taken by our community partners:
-* Notes compilation/ main document: https://docs.google.com/document/d/1ICd7H8eKtrFsNsjVs4k6QpY2b94w8Ds94B3XNN3tp0o/edit#heading=h.2a9kx7jt3e1t
-* Vanessa's notes: https://docs.google.com/document/d/1fYByjs-tpbJJAIhlLupxTkdEbUEGsPcd7c-7NCWnMMo/edit
-
-Google Webmaster Account (for search engine optimization + ask Barbara for access): https://search.google.com/search-console?resource_id=https%3A%2F%2Fcosicentraliowa.herokuapp.com%2F&hl=en
-
-#### How to access and install the code:
+#### How to access and install the code
 * Make sure you have:
   + Rails version 5.1.6
   + Ruby version 2.5.7
-  + Accounts on Heroku and GitHub, ask Barbara to add you to the CoSI projects for each
+  + Accounts on Heroku and GitHub, ask Barbara (prof) to add you to the CoSI projects for each
   + sqlite3
   + You'll eventually need to install postgreSQL and Heroku command-line (we suggest getting these now)
 * Clone the GitHub repo on your local device
@@ -33,7 +34,10 @@ Google Webmaster Account (for search engine optimization + ask Barbara for acces
 
 ----------
 
-## File locations
+## File Locations and Info
+
+Most pages have three versions: English (pagename.html.erb), Spanish (sp_pagename.html.erb), and French (fr_pagename.html.erb). Each page has a provide statement at the top with its langage (e.g. for English, `<% provide(:lang, "en") %>`), and only the English pages currently have content and are visible on the site.
+
 __Header and Footer views:__ `app/views/layouts/`
 
 __Home and Volunteer pages view:__ `app/views/static_pages/`
@@ -42,10 +46,15 @@ __Home and Volunteer pages view:__ `app/views/static_pages/`
   + Includes tests for all pages
 
 __Resources page view:__ `app/views/resources/`
+* Resources page code __needs editing!__
+  + Currently, the code to display the Spanish-version link and title is not generalized. See lines 64-71 for the problem and additional info. Please fix this.
 * Controller: `app/controllers/resources_controller.rb`
 * Test: `test/controllers/resources_controller_test.rb`
 * Model (for database): `app/models/community_resource.rb`
 * Data (for database): `db/seeds.rb`
+  + Database setup and usage is __well documented in this file (`db/seeds.rb`).__ See this file for all database information, including information about each database field and how to seed the database locally and on Heroku.
+  + To add fields to the database, please see https://stackoverflow.com/questions/4834809/adding-a-column-to-an-existing-table-in-a-rails-migration
+  + Please use migrations for all database changes. *_Don't_ edit `schema.rb`*
 * _Note: entries in our database can be tagged. You can use these tags to make the database searchable. We used the [Acts as Taggable gem:](https://medium.com/le-wagon/acts-as-taggable-on-tutorial-with-rails-5-417a862804b6) https://medium.com/le-wagon/acts-as-taggable-on-tutorial-with-rails-5-417a862804b6_
 
 __Contact page view:__ `app/views/contacts/new.html.erb`
@@ -57,7 +66,7 @@ __Contact page view:__ `app/views/contacts/new.html.erb`
   + We’re using the mailform gem, so we don’t need any explicit mailers. 
   + It’s also possible to change the format of the email if you don’t like how it looks right now (it’s the default). Instructions are on the mailform github README file: https://github.com/heartcombo/mail_form
 * Configuration: SEE BELOW
-* PASSWORDS/ACCOUNTS: SEE BELOW
+* Passwords/Accounts: SEE BELOW
 
 __General page layout:__ `app/views/layouts/application.html.erb`
 
@@ -113,36 +122,66 @@ Gmail Account:
 
 ---------
 
-## About the files
+## Gems
 
 Gems we used:
 * Acts as Taggable: https://medium.com/le-wagon/acts-as-taggable-on-tutorial-with-rails-5-417a862804b6
 * Mailcatcher: https://mailcatcher.me/
 * Mailform: https://github.com/heartcombo/mail_form, https://everydayrails.com/2011/09/07/rails-contact-form.html
+* Site map generator: Used for search engine. See more information at the end of the "File Locations and Info" section.
 
 ---------
 
-## Tasks for next group
-* Check formatting on other devices and platforms (e.g. phone, tablet; firefox, etc.)
-* Improve search engine optimization
-* French and Spanish languages (and the language toggle on each page)
-  + Can delete other languages on nav bar after it’s set up
-* Searchable database feature 
-* Functionality to directly upload PDFs into database
-  + Look into Amazon S3 to store resources
-* Maybe: add validation on form for email/phone number format
-* Maybe: link to PayPal to accept donations on the volunteer/donation page
+## Tasks for Next Group
+
+### Things to fix:
 * Contact form: display an error if the user doesn’t select a subject in the dropdown
-  + Right now the app just crashes 
-* Usability testing
+  + Right now the app just crashes
+  + See Hartl tutorial for help on implementing
+* Resources page: Currently, the code to display the Spanish-version link and title is not generalized. If a Spanish-version link exists in the database, it will always be displayed as “Lista de Recursos en la Comunidad” (“List of Community Resources”), which is currently the only resource with a Spanish version, but there will likely be others in the future. See lines 64-71 for the problem and additional info.
+* Volunteer page: Refactor. Right now, most of the formatting is in `static_pages/volunteer.html.erb`, and should be moved to `custom.scss`
+
+### Main tasks:
+* French and Spanish language support
+  + Language toggle on top right of each page (see prototypes linked in "Overview" section)
+  + Gem suggested by Cassie (alumni mentor): https://guides.rubyonrails.org/i18n.html
+  + Can delete other languages on top navbar (header), homepage, and resources navbar after it’s set up. Ask community partners whether they want to remove the Spanish in the logo or not.
+* Functionality to directly upload PDFs into database
+  + This will likely be easiest if you create a new database similar to the current one, but instead of "link" and "splink" categories, it would have categories for the information needed to render the PDF, likely stored elsewhere
+  + Look into Amazon S3 to store PDF resources
+  + Gem suggested by Cassie (alumni mentor) for setting up the PDF database: https://guides.rubyonrails.org/i18n.html
+* Improve search engine optimization
+  + Google, but also other search engines (Bing, Yahoo, etc.)
+  + In other languages?
+* Check formatting on other devices and platforms (e.g. phone, tablet; firefox, etc.)
+* Searchable database feature
+  + Add a search bar to the top left of the resources page (see prototypes linked in "Overview" section)
+  + We suggest using the tag functionality (see Acts As Taggable On gem in the "Gems" section)
 * A form for community partners to edit the database
   + Priority = add resources
   + Ideal = edit/ remove resources
+
+### Additional potential tasks:
+* Add validation on form for email/phone number format
+* Link to PayPal to accept donations on the volunteer/donation page
+* Usability testing
 * Additional potential desired pages and features __(ask community partners)__:
   + Current events calendar?
   + Immigration news?
   + FAQ?
   + Board member selection? (Password protected)
+
+---------
+
+## General Advice
+
+If CSS changes or images don’t show up on the heroku app, try running `rails assets:precompile` on your local terminal, adding and commiting the changes, and then pushing it to heroku again.
+
+We used Slack to communicate with our alumni mentor, texting and google docs to communicate with each other and store notes, and Trello to record our tasks for each sprint.
+
+Trello link: https://trello.com/b/jiE2JaUw
+
+More helpful tips are located in our Final Team Report (ask Barbara (prof) for access).
 
 ---------
 
