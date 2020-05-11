@@ -122,6 +122,8 @@ Gems we used:
   + FAQ?
   + Board member selection? (Password protected)
 
+All CoSI Prototypes and Community Partner Notes: 
+https://docs.google.com/document/d/1yUEkut__8ZKVZPuTgrXMM4tWBSXsMRKUVcHI-bDgFfQ/edit?usp=sharing
 ---------
 
 ## License
