@@ -9,9 +9,27 @@ CoSI original website URL (still in use): https://cosicentraliowa.org/
 
 Our website URL: https://cosicentraliowa.herokuapp.com/
 
-All CoSI Prototypes and Community Partner Notes: https://docs.google.com/document/d/1yUEkut__8ZKVZPuTgrXMM4tWBSXsMRKUVcHI-bDgFfQ/edit?usp=sharing
+All website prototypes and our community partner meeting notes: https://docs.google.com/document/d/1yUEkut__8ZKVZPuTgrXMM4tWBSXsMRKUVcHI-bDgFfQ/edit?usp=sharing
+
+Notes taken by our community partners:
+* Notes compilation/ main document: https://docs.google.com/document/d/1ICd7H8eKtrFsNsjVs4k6QpY2b94w8Ds94B3XNN3tp0o/edit#heading=h.2a9kx7jt3e1t
+* Vanessa's notes: https://docs.google.com/document/d/1fYByjs-tpbJJAIhlLupxTkdEbUEGsPcd7c-7NCWnMMo/edit
 
 Google Webmaster Account (for search engine optimization + ask Barbara for access): https://search.google.com/search-console?resource_id=https%3A%2F%2Fcosicentraliowa.herokuapp.com%2F&hl=en
+
+__How to access and install the code:__
+1. Make sure you have:
+  + Rails version 5.1.6
+  + Ruby version 2.5.7
+  + Accounts on Heroku and GitHub, ask Barbara to add you to the CoSI projects for each
+  + sqlite3
+  + You'll eventually need to install postgreSQL and Heroku command-line (we suggest getting these now)
+2. Clone the GitHub repo on your local device
+3. cd into your new local git directory and run the commands `bundle update` and `bundle install`
+4. Link to Heroku
+  + See https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes for help
+5. Don't make any changes without first branching (`git checkout -b new-branch-name`)
+6. Good luck!
 
 ----------
 
@@ -131,3 +149,6 @@ Gems we used:
 ## License
 
 The contents of this site itself are property of Community Support for Immigrants, Copyright 2020, all rights reserved. The underlying source code used to display the content is licensed under the [MIT license](LICENSE.md).
+
+### Sources
+* Ruby on Rails Tutorial: Learn Web Development with Rails. Copyright © 2016 by Michael Hartl. Last updated 2020/04/08 16:22:49 PT.
