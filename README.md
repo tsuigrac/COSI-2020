@@ -1,4 +1,4 @@
-# README
+# CoSI README
 __Contributors: Grace, Jamie, Ally, Vidush, Henry__
 
 ----------
