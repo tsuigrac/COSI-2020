@@ -19,15 +19,15 @@ Google Webmaster Account (for search engine optimization + ask Barbara for acces
 
 ### How to access and install the code:
 1. Make sure you have:
-  + Rails version 5.1.6
-  + Ruby version 2.5.7
-  + Accounts on Heroku and GitHub, ask Barbara to add you to the CoSI projects for each
-  + sqlite3
-  + You'll eventually need to install postgreSQL and Heroku command-line (we suggest getting these now)
+  a. Rails version 5.1.6
+  b. Ruby version 2.5.7
+  c. Accounts on Heroku and GitHub, ask Barbara to add you to the CoSI projects for each
+  d. sqlite3
+  e. You'll eventually need to install postgreSQL and Heroku command-line (we suggest getting these now)
 2. Clone the GitHub repo on your local device
 3. cd into your new local git directory and run the commands `bundle update` and `bundle install`
 4. Link to Heroku
-  + See https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes for help
+  a. See https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes for help
 5. Don't make any changes without first branching (`git checkout -b new-branch-name`)
 6. Good luck!
 
