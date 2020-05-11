@@ -11,6 +11,8 @@ Our website URL: https://cosicentraliowa.herokuapp.com/
 
 All CoSI Prototypes and Community Partner Notes: https://docs.google.com/document/d/1yUEkut__8ZKVZPuTgrXMM4tWBSXsMRKUVcHI-bDgFfQ/edit?usp=sharing
 
+Google Webmaster Account (for search engine optimization + ask Barbara for access): https://search.google.com/search-console?resource_id=https%3A%2F%2Fcosicentraliowa.herokuapp.com%2F&hl=en
+
 ----------
 
 ## File locations
