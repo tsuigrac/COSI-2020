@@ -1,5 +1,5 @@
 # README
-### Contributors: Grace, Jamie, Ally, Vidush, Henry
+#### Contributors: Grace, Jamie, Ally, Vidush, Henry
 
 ----------
 
@@ -49,7 +49,6 @@ __Sitemap:__ `config/sitemap.rb`
 * Uses the sitemap generator gem (in the Gemfile) to generate sitemaps, which are then discoverable by search engines, and help in indexing the various pages. 
 * In its current form it only generates a rudimentary sitemap that probably won’t include more than the home page. All the routes in the page (every page), need to be added in the final iteration of the sitemap
 
-
 ---------
 
 ## Contact Page Additional Info
@@ -90,7 +89,38 @@ Gmail Account:
 * Password: Ask Professor Johnson
 * The account uses Google Authenticator so multiple people can have access. It’s available as an app for your phone.
 
+---------
 
+## About files
+
+Gems we used:
+* Acts as Taggable: https://medium.com/le-wagon/acts-as-taggable-on-tutorial-with-rails-5-417a862804b6
+* Mailcatcher: https://mailcatcher.me/
+* Mailform: https://github.com/heartcombo/mail_form, https://everydayrails.com/2011/09/07/rails-contact-form.html
+
+---------
+
+Tasks for next group
+* Check formatting on other devices and platforms (e.g. phone, tablet; firefox, etc.)
+* Improve search engine optimization
+* French and Spanish languages (and the language toggle on each page)
+  + Can delete other languages on nav bar after it’s set up
+* Searchable database feature 
+* Functionality to directly upload PDFs into database
+  + Look into Amazon S3 to store resources
+* Maybe: add validation on form for email/phone number format
+* Maybe: link to PayPal to accept donations on the volunteer/donation page
+* Contact form: display an error if the user doesn’t select a subject in the dropdown
+  + Right now the app just crashes 
+* Usability testing
+* A form for community partners to edit the database
+  + Priority = add resources
+  + Ideal = edit/ remove resources
+* Additional potential desired pages and features __(ask community partners)__:
+  + Current events calendar?
+  + Immigration news?
+  + FAQ?
+  + Board member selection? (Password protected)
 
 ---------
 
