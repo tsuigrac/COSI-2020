@@ -12,11 +12,9 @@ This document contains all of the information needed to continue working on the 
 * CoSI original website URL (still in use): https://cosicentraliowa.org/
 * Our website URL: https://cosicentraliowa.herokuapp.com/
 * All website prototypes and our community partner meeting notes: https://docs.google.com/document/d/1yUEkut__8ZKVZPuTgrXMM4tWBSXsMRKUVcHI-bDgFfQ/edit?usp=sharing
-* Notes taken by our community partners:
-  + Notes compilation/ main document: https://docs.google.com/document/d/1ICd7H8eKtrFsNsjVs4k6QpY2b94w8Ds94B3XNN3tp0o/edit#heading=h.2a9kx7jt3e1t
-  + Vanessa's notes: https://docs.google.com/document/d/1fYByjs-tpbJJAIhlLupxTkdEbUEGsPcd7c-7NCWnMMo/edit
+* Notes taken by our community partners: https://docs.google.com/document/d/1Q_7CE9BUyGDGXsBs6xLU1BRfE0SpnP7mnvzutK-EweY/edit?usp=sharing
 * Google Webmaster Account (for search engine optimization + ask Barbara (prof) for access): https://search.google.com/search-console?resource_id=https%3A%2F%2Fcosicentraliowa.herokuapp.com%2F&hl=en
-* Our Final Presentation and Final Team Report (ask Barbara (prof) for access; we don't want our full names on this repository, since it is open-source)
+* Our Final Presentation and Final Team Report (ask Barbara (prof) for access)
 
 #### How to access and install the code
 * Make sure you have:
